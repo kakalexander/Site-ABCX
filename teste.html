@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC-X Sistemas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <style>
+          .custom-container {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Adiciona uma coluna flexível */
+  }
+
+  /* Estilo dos botões */
+  .custom-buttons-container {
+    display: flex;
+    margin-bottom: 20px; /* Adiciona espaço entre os botões e o conteúdo */
+  }
+
+  .custom-button {
+    background-color: #18033a;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 15px; /* Espaçamento horizontal de 5px entre cada botão */
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, .60); /* Adicionando uma sombra esfumaçada */
+    max-width: 200px; /* Define a largura máxima dos botões */
+    width: auto; /* Faz com que os botões ajustem automaticamente a largura */
+    outline: none; /* Remove o contorno */
+  }
+
+  .custom-button:hover {
+    background-color: orange; /* Muda a cor do botão para laranja ao passar o mouse */
+  }
+
+  /* Estilo dos botões quando clicados */
+  .custom-button.clicked {
+    background-color: orange;
+  }
+
+  /* Estilo do conteúdo */
+  .custom-content {
+    display: none;
+    max-width: 1000px; /* Limita a largura do conteúdo */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-bottom: 20px; /* Adiciona espaço entre os conteúdos */
+    align-items: center; /* Alinha os itens verticalmente */
+    justify-content: space-between; /* Adiciona espaço entre texto e imagem */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+
+  /* Estilo da imagem */
+  .tela1 {
+    max-width: 50%; /* Ajusta a largura da imagem para 50% */
+    height: auto;
+    margin-left: 100px; /* Adiciona espaço à esquerda da imagem para afastá-la do texto */
+  }
+  .engrenagem {
+    width: 35px;
+    padding-top: 60px;
+    margin-right: 10px;
+  }
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #F0F8FF;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li button {
+    background-color: #F0F8FF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+nav ul li button#abcx-btn {
+    background-color: #FFD700;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+#intro {
+    margin-bottom: 40px;
+}
+
+#intro h1 {
+    font-size: 32px;
+    color: #333;
+}
+
+#intro p {
+    font-size: 18px;
+}
+
+#intro ul {
+    list-style: none;
+    padding: 0;
+}
+
+#intro ul li {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+#screenshot {
+    margin: 20px 0;
+}
+
+#screenshot img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#details .column {
+    width: 30%;
+    min-width: 200px;
+    text-align: left;
+}
+
+#details h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+#details ul {
+    list-style: none;
+    padding: 0;
+}
+
+#details ul li {
+    font-size: 16px;
+    margin: 10px 0;
+}
+  /* Media queries para ajustar o layout em telas menores */
+  @media screen and (max-width: 768px) {
+    .custom-buttons-container {
+      flex-wrap: wrap; /* Permite que os botões quebrem para a linha abaixo */
+      justify-content: center; /* Centraliza os botões */
+    }
+
+    .custom-content {
+      flex-direction: column; /* Ajusta a direção para coluna em telas menores */
+      text-align: center; /* Centraliza o texto */
+    }
+
+    .custom-content .text {
+      padding-right: 0; /* Remove o padding à direita */
+    }
+
+    .custom-content img {
+      margin: 10px 0; /* Adiciona espaço em torno da imagem */
+    }
+  }
+    </style>
+    <header>
+        <nav>
+            <ul>
+                <li><button id="abcx-btn">ABC-X</button></li>
+                <li><button>PDV</button></li>
+                <li><button>MESA</button></li>
+                <li><button>COMANDA</button></li>
+                <li><button>DELIVERY</button></li>
+                <li><button>VENDAS</button></li>
+                <li><button>MOBILE</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="custom-container">
+        <div class="custom-buttons-container">
+          <button id="custom-button1" class="custom-button clicked" onclick="showContent(1)">Botão 1</button>
+          <button id="custom-button2" class="custom-button" onclick="showContent(2)">Botão 2</button>
+          <button id="custom-button3" class="custom-button" onclick="showContent(3)">Botão 3</button>
+          <button id="custom-button4" class="custom-button" onclick="showContent(4)">Botão 4</button>
+          <button id="custom-button5" class="custom-button" onclick="showContent(5)">Botão 5</button>
+          <button id="custom-button6" class="custom-button" onclick="showContent(6)">Botão 6</button>
+          <button id="custom-button7" class="custom-button" onclick="showContent(7)">Botão 7</button>
+        </div>
+    
+        <div id="custom-content1" class="custom-content flex-container">
+          <img class= "engrenagem"src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFQklEQVR4nO1aS29VVRhdvQVMayhtSmMrVBiUOFCTmhDTJvah1j9g4yNxCDIxAaJJCbSUgWOJDg2dwQgmvKQpoGhSaoxiQk0wtANoaEKgKFEUlNJe8iVrk5Xt3ueee7z30kZWcpJ79+N77LO/x/72AZ7g/4NnAXwHYIHPBIBmLEN8DiDvPda2pFAL4AMAHwGoi4y5ROE7AXTwt7WFYDQ+Jk2jXRH0ApiRVZ4E0AigGkAPgGEAxwEsArgDYCWfO2yzvr0AugDkOPei0JshnbLChJ0jwwuy6tMArge20jGZeyzQb3Om5G1d4O8bVLJsWAVgnsbbAKBFBLHVHgcwAKCPK+1jLfsGOHaRc6dIq56058mrrPiWzPv5vxXAHgAbMtDawLlGw/AWaRuPssL2+hiZjZSB/gHSHiOvsuBpAKNkNEejLzV6xQZHybMkhu326UpR4jKAtoR55m4HuaomlMMc2wbpjmNoE7sblTezijJlWpl57tfTooQZrA/zMO8B+CngmRz8dvNQ70a8U5Moc5oymCw3i9kJNRInFoTxXORNPCcOIE+GZxIUOcMx7v85MXZFm2wzlWUmbdDcJitWT+90ILISbwC4zfF/A/hU8qmYIqCr3c851vYbgNcC9HvIu5+yuDhjGUBB7JAAZQxj6AbwF8daZH7B609SxOFFZgbW/iejfQwtEoC3p1GkTlKGqchrN6H/4JirANYExqRRBFzpq+z7PbAghvW0T7doq5ESjUw78gxYPtqZljvhvqe3KlaRDs51fROk7WO3pEKhjCGKauZBi4GI7dxhFYD3AcxKinIIwDo6jJgitRxzUFKUWdKq8ng4bOTY68W64G4ysHxIUcU9PURhwaD1CYC7stevJSgyyzH2+x7nusBXQ9qTopTDec4x2VJjLydZcqfYLAJdAfC2t2qHpf+EZ7z2+6T0H+EcB6N1RfqNl2KA7SZbahznJMtUFfskVjiG33j72lzm1gTaW73zRjtpaBwKCdzHdpMtES08ijoXlw9E8XNs38F4c5P/HwD4ghE5LZo45wFpGK1t4v6/8savFbkuUdZgDUC9kJ3mjgbGOE/WLq7TAtt9tt+mqyyE9RJI75OG0TK8LK7fx1HK5uQ0u/kXXApgLnFFRABHxI8bz8uWSOPjV8s2srmKNbKYIayQGsBCkiKdy12RCW9r6Xl7qW6t8RDx5iVi7Dsjxt7kGftnAJ4pxORExP0OP0b3+ybbQzsliuGMAfGI9J8MBMQvpf9wkQFxF9st8pc1RbknKcpsQopyTVKUuxlSlK6sSaOuWqGk8SATwtoERWo45lDGpDFXjCJZ0viODGl8Z8o0fk+WNL5OTm2XI+7UP1g511msImkPVq1SjEh9sNqZ8qjbJXt9ksfWYhV5CcDPYluvlvKoq8WHBh78RyIV8tdZOMizkLCfFzyFFFnHOPAP236NFDd6I8WHJPf+CLVFloNavThgAe5sgiJnJQja83Vk+24CcCtSDnIesyB6WNqfp5BjYjOh6G2e5B0APwrjmCLu+YGxI1agm+a4MSnQ3chyd5ITN6gl0ymuVgyvsFgQK5nu5pgYNolhn/JKprlSF7FvVaCIfapURexC1wpmhKXGSCWuFRxcndcuZZyxDwYygDTYyLmuCNhfqYuep+TqrT5w9XaeyV1fpGrfyL5dHOtfvTXI1VtZ30i1nEHMp/9SgsvQ6cdxGQq6P72evsiVzjHaD6W4nh4qcD3djQrBAtIWAB8m5D0unehgcuhWPZbfGa0tlfxg4L98wmFpybJDMw3afVQzvlw/qnkCZMBDy7uKv8CsqXQAAAAASUVORK5CYII=" alt="Imagem 1">
+          <div class="text">
+            <h1>ABC-X</h1>
+            <p>Gerencie todos os setores do seu negócio com o abcX, automatize processos e tenha controle de tudo. Faça venda, emita documentos fiscais, controle seu estoque, gerencie sua equipe do pedido ao faturamento. abcX é descomplicado e intuitivo.</p>
+          </div>
+          <img class="tela1" src="Tela 1 Sistema .png" alt="Imagem 1">
+          <section id="details">
+            <div class="1">
+                <h2>Ferramentas</h2>
+                <ul>
+                     <li>Venda</li>
+                    <li>Estoque</li>
+                    <li>Financeiro</li>
+                    <li>Cadastro de Cliente</li>
+                </ul>
+            </div>
+            <div class="1">
+                <h2>Funcionalidades</h2>
+                <ul>
+                    <li>PDV</li>
+                    <li>Mesa e Comanda</li>
+                    <li>Delivery</li>
+                    <li>Pedidos</li>
+                </ul>
+            </div>
+            <div class="1">
+                <h2>Soluções</h2>
+                <ul>
+                    <li>APP Garçom</li>
+                    <li>Tablet na Mesa</li>
+                    <li>Sistema na Máquina POS</li>
+                    <li>Loja Online</li>
+                </ul>
+            </div>
+        </section>
+        </div>
+        
+        <div id="custom-content2" class="custom-content flex-container">
+          <div class="text">
+            <h1>Botão 2</h1>
+            <p>Texto do Botão 2</p>
+          </div>
+        </div>
+        <div id="custom-content3" class="custom-content flex-container">
+          <img src="Tela 1 Sistema .png" alt="Imagem 1">
+          <div class="text">
+            <h1>Botão 3</h1>
+            <p>Texto do Botão 3</p>
+          </div>
+        </div>
+        <div id="custom-content4" class="custom-content flex-container">
+          <img src="Tela 1 Sistema .png" alt="Imagem 1">
+          <div class="text">
+            <h1>Botão 4</h1>
+            <p>Texto do Botão 4</p>
+          </div>
+        </div>
+        <div id="custom-content5" class="custom-content flex-container">
+          <img src="Tela 1 Sistema .png" alt="Imagem 1">
+          <div class="text">
+            <h1>Botão 5</h1>
+            <p>Texto do Botão 5</p>
+          </div>
+        </div>
+        <div id="custom-content6" class="custom-content flex-container">
+          <img src="Tela 1 Sistema .png" alt="Imagem 1">
+          <div class="text">
+            <h1>Botão 6</h1>
+            <p>Texto do Botão 6</p>
+          </div>
+        </div>
+        <div id="custom-content7" class="custom-content flex-container">
+          <img src="Tela 1 Sistema .png" alt="Imagem 1">
+          <div class="text">
+            <h1>Botão 7</h1>
+            <p>Texto do Botão 7</p>
+          </div>
+        </div>
+      </div>
+        <section id="details">
+            <div class="column">
+                <h2>Ferramentas</h2>
+                <ul>
+                    <li>Venda</li>
+                    <li>Estoque</li>
+                    <li>Financeiro</li>
+                    <li>Cadastro de Cliente</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h2>Funcionalidades</h2>
+                <ul>
+                    <li>PDV</li>
+                    <li>Mesa e Comanda</li>
+                    <li>Delivery</li>
+                    <li>Pedidos</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h2>Soluções</h2>
+                <ul>
+                    <li>APP Garçom</li>
+                    <li>Tablet na Mesa</li>
+                    <li>Sistema na Máquina POS</li>
+                    <li>Loja Online</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        // Função para exibir o conteúdo correspondente ao botão clicado
+        function showContent(buttonNumber) {
+          // Esconde todos os conteúdos
+          var contents = document.querySelectorAll('.custom-content');
+          contents.forEach(function(content) {
+            content.style.display = 'none';
+          });
+      
+          // Remove a classe 'clicked' de todos os botões
+          var buttons = document.querySelectorAll('.custom-button');
+          buttons.forEach(function(button) {
+            button.classList.remove('clicked');
+          });
+      
+          // Exibe o conteúdo correspondente ao botão clicado
+          var contentToShow = document.getElementById('custom-content' + buttonNumber);
+          if (contentToShow) {
+            contentToShow.style.display = 'flex';
+          }
+      
+          // Adiciona a classe 'clicked' ao botão clicado
+          var clickedButton = document.getElementById('custom-button' + buttonNumber);
+          if (clickedButton) {
+            clickedButton.classList.add('clicked');
+          }
+        }
+      
+        // Exibe o conteúdo do botão 1 ao carregar a página
+        showContent(1);
+      </script>
+      
+</body>
+</html>
