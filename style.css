@@ -116,6 +116,30 @@
   background-color: #F49920;
 }
 
+#details {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os elementos sejam quebrados em várias linhas */
+  justify-content: space-around; /* Distribui os elementos uniformemente com espaço entre eles */
+  margin: 20px 0;
+}
+
+#details .li { /* Seleciona cada coluna */
+  flex: 1 0 300px; /* Define a largura mínima, largura máxima e largura base de cada coluna */
+  text-align: center; /* Alinha o conteúdo no centro horizontalmente */
+  padding: 20px;
+  border: 1px solid #ccc; /* Adiciona uma borda fina para melhor visualização */
+}
+
+#details ul {
+  list-style: none; /* Remove os marcadores padrão das listas */
+  padding: 0;
+}
+
+#details li {
+  margin-bottom: 10px; /* Adiciona espaço entre os itens da lista */
+}
+
+
 /* Media queries para ajustar o layout em telas menores */
 @media screen and (max-width: 768px) {
   .custom-content {
