@@ -24,6 +24,5 @@
       clickedButton.classList.add('clicked');
     }
   }
-
   // Exibe o conteúdo do botão 1 ao carregar a página
   showContent(1);

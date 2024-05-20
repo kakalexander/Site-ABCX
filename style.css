@@ -5,14 +5,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; /* Adiciona uma coluna flexível */
+  flex-direction: column;
 }
 
 /* Estilo dos botões */
 .custom-buttons-container {
   display: flex;
-  flex-wrap: wrap; /* Permite que os botões quebrem para a linha abaixo */
-  justify-content: center; /* Centraliza os botões */
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .custom-button {
@@ -24,20 +24,19 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 10px 15px; /* Espaçamento horizontal de 5px entre cada botão */
+  margin: 10px 15px;
   cursor: pointer;
   border-radius: 4px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, .60); /* Adicionando uma sombra esfumaçada */
-  max-width: 200px; /* Define a largura máxima dos botões */
-  width: auto; /* Faz com que os botões ajustem automaticamente a largura */
-  outline: none; /* Remove o contorno */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, .60);
+  max-width: 200px;
+  width: auto;
+  outline: none;
 }
 
 .custom-button:hover {
-  background-color: #F49920; /* Muda a cor do botão para laranja ao passar o mouse */
+  background-color: #F49920;
 }
 
-/* Estilo dos botões quando clicados */
 .custom-button.clicked {
   background-color: #F49920;
 }
@@ -45,32 +44,22 @@
 /* Estilo do conteúdo */
 .custom-content {
   display: flex;
-  max-width: 90%; /* Limita a largura do conteúdo */
-  text-align: left; /* Alinha o texto à esquerda */
-  align-items: center; /* Alinha os itens verticalmente */
-  justify-content: space-around; /* Distribui os elementos horizontalmente */
+  flex-direction: row;
+  max-width: 90%;
+  text-align: left;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
 }
 
-/* Estilo do Texto */
+
+/* Estilo do Texto Principal (Gerencia todos...) */
 .text1 {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: normal;
-  width: 100%; /* Ajusta a largura para ocupar toda a largura do container */
-  padding: 0 20px; /* Adiciona um espaçamento interno */
-  margin-top: -200px;
-}
-
-.engrenagem {
-  width: 35px;
-  margin-right: 10px;
-  margin-top: -140px;
-}
-
-.acesso img {
-  max-width: 90%; /* Ajusta a largura da imagem para ocupar todo o espaço disponível */
-  height: auto;
-  margin-left: 100px;
+  width: 100%;
+  padding: 0 20px 230px;
 }
 .text1 h1 {
   font-family: "Roboto", sans-serif;
@@ -78,6 +67,21 @@
   font-style: normal;
 }
 
+/* Engrenagem na esquerda */
+.engrenagem {
+  width: 35px;
+  margin-right: 10px;
+  margin-bottom: 170px;
+}
+
+/* Imagem do sitema (direita) */
+.acesso img {
+  max-width: 90%;
+  height: auto;
+  margin-left: 100px;
+}
+
+/* Ajuste texto(Direita)*/
 .acesso p {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -86,15 +90,18 @@
   margin-left: 100px;
 }
 
+/* Saiba mais*/
 .saiba-mais {
-  margin-top: 20px; /* Ajuste conforme necessário */
-  text-align: center; /* Centraliza o conteúdo */
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
 }
 
 .saiba-mais img {
   width: 100px;
 }
 
+/* botao saiba mais */
 .saiba-mais button {
   background-color: #153749;
   border: none;
@@ -116,42 +123,70 @@
   background-color: #F49920;
 }
 
-#details {
+/* Container PAI listas( Ferramentas, Funcionalidades, Soluções*/
+.container {
   display: flex;
-  flex-wrap: wrap; /* Permite que os elementos sejam quebrados em várias linhas */
-  justify-content: space-around; /* Distribui os elementos uniformemente com espaço entre eles */
-  margin: 20px 0;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start; 
+  margin-top: 350px;
+  width: 70%;
+  padding: 0px 0px 200px;
+  margin-left: 5%;
+  position: absolute; 
 }
 
-#details .li { /* Seleciona cada coluna */
-  flex: 1 0 300px; /* Define a largura mínima, largura máxima e largura base de cada coluna */
-  text-align: center; /* Alinha o conteúdo no centro horizontalmente */
-  padding: 20px;
-  border: 1px solid #ccc; /* Adiciona uma borda fina para melhor visualização */
+.lista {
+  margin-right: 20px;
 }
 
-#details ul {
-  list-style: none; /* Remove os marcadores padrão das listas */
+.lista h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lista ul {
+  list-style-type: none;
   padding: 0;
 }
+.lista li img {
+  vertical-align: top;
+  width: 20px;
+}
 
-#details li {
-  margin-bottom: 10px; /* Adiciona espaço entre os itens da lista */
+.lista ul li {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+  font-style: normal;
 }
 
 
 /* Media queries para ajustar o layout em telas menores */
 @media screen and (max-width: 768px) {
   .custom-content {
-    flex-direction: column; /* Ajusta a direção para coluna em telas menores */
-    text-align: center; /* Centraliza o texto */
+    flex-direction: column;
+    text-align: center;
   }
 
   .custom-content .text {
-    padding: 0; /* Remove o padding */
+    padding: 0;
   }
 
   .custom-content img {
-    margin: 10px 0; /* Adiciona espaço em torno da imagem */
+    margin: 10px 0;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Reseta o posicionamento absoluto */
+    left: auto;
+    top: auto;
+  }
+
+  .lista {
+    margin-bottom: 20px;
   }
 }
