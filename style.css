@@ -45,7 +45,7 @@
 .custom-content {
   display: flex;
   flex-direction: row;
-  max-width: 90%;
+  max-width: 100%;
   text-align: left;
   align-items: center;
   justify-content: flex-start;
@@ -78,7 +78,7 @@
 .acesso img {
   max-width: 90%;
   height: auto;
-  margin-left: 100px;
+  margin-left: 140px;
 }
 
 /* Ajuste texto(Direita)*/
@@ -87,7 +87,7 @@
   font-weight: 500;
   font-style: normal;
   margin-top: 50px;
-  margin-left: 100px;
+  margin-left: 140px;
 }
 
 /* Saiba mais*/
@@ -137,13 +137,14 @@
 }
 
 .lista {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .lista h2 {
   font-family: "Roboto", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-style: normal;
+  font-size: 20px;
 }
 
 .lista ul {
