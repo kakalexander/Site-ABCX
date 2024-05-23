@@ -3,6 +3,7 @@ function showContent(buttonNumber) {
   // Esconde todos os conteúdos
   var contents = document.querySelectorAll('.custom-content');
   contents.forEach(function(content) {
+    content.classList.remove('show');
     content.style.display = 'none';
   });
 
@@ -16,6 +17,10 @@ function showContent(buttonNumber) {
   var contentToShow = document.getElementById('custom-content' + buttonNumber);
   if (contentToShow) {
     contentToShow.style.display = 'flex';
+    // Delay para permitir que o display: flex seja aplicado antes da transição de opacidade
+    setTimeout(function() {
+      contentToShow.classList.add('show');
+    }, 10);
   }
 
   // Adiciona a classe 'clicked' ao botão clicado
@@ -23,6 +28,12 @@ function showContent(buttonNumber) {
   if (clickedButton) {
     clickedButton.classList.add('clicked');
   }
+
+  // Rolagem suave para o conteúdo
+  contentToShow.scrollIntoView({ behavior: 'smooth' });
 }
+
 // Exibe o conteúdo do botão 1 ao carregar a página
-showContent(1);
+document.addEventListener('DOMContentLoaded', function() {
+  showContent(1);
+});

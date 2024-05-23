@@ -1,4 +1,4 @@
-/* Estilo da página */
+/*===============================Estilo da página===================================*/
 .custom-container {
   height: 100%;
   margin: 0;
@@ -8,11 +8,16 @@
   flex-direction: column;
 }
 
-/* Estilo dos botões */
+/*==================================Estilo dos botões=======================================*/
 .custom-buttons-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  /* Função para deixar os botões fixos 
+  position:fixed;
+  top: 0;  Posição no topo da página 
+  left: 10;  Posição à esquerda da página */
 }
 
 .custom-button {
@@ -41,7 +46,7 @@
   background-color: #F49920;
 }
 
-/* Estilo do conteúdo */
+/* =========================Estilo do conteúdo=====================*/
 .custom-content {
   display: flex;
   flex-direction: row;
@@ -52,35 +57,67 @@
   padding: 20px;
 }
 
-/* Estilo do Texto Principal (Gerencia todos...) */
+/*======================= Estilo do Texto Principal (Gerencia todos...)===================*/
 .text1 {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: normal;
   width: 100%;
-  padding: 0 20px 230px;
+  padding: 0 40px 230px;
 }
 .text1 h1 {
+    font-size: 40px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    color: #0a212c;
+}
+.negritos {
+  color: #0a212c;
   font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+  font-weight: 900;
+  font-style: normal; 
+}
+#text-principal {
+  font-size: 17px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
-/* Engrenagem na esquerda */
+/*=====================Engrenagem====================== */
 .engrenagem {
   width: 35px;
   margin-right: 10px;
-  margin-bottom: 170px;
+  margin-left: 50px ;
+  margin-bottom: 160px;
+}
+.engrenagem-mesa {
+  width: 35px;
+  margin-right: 10px;
+  margin-bottom: 150px;
+}
+.engrenagem-comanda {
+  width: 35px;
+  margin-right: 10px;
+  margin-bottom: 150px;
+}
+.vertical-line {
+  width: 1px;
+  height: 150px;
+  background-color: #000; /* cor da linha */
+
+  margin-top: -150px; /* espaçamento ao redor da linha */
 }
 
-/* Imagem do sitema (direita) */
+/*==================== Imagem do sitema (direita)============================= */
 .acesso img {
   max-width: 80%;
   height: auto;
   margin-left: 140px;
 }
 
-/* Ajuste texto(Direita)*/
+/* ===================Ajuste texto(Direita)===================*/
 .acesso p {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -141,14 +178,18 @@
 
 .lista h2 {
   font-family: "Roboto", sans-serif;
-  font-weight: 500;
+  font-weight: 900;
   font-style: normal;
   font-size: 20px;
+  padding-top: 100px;
+  margin: 30px;
 }
 
 .lista ul {
   list-style-type: none;
   padding: 0;
+  padding-top: 0px;
+  margin: 30px;
 }
 .lista li img {
   vertical-align: top;
@@ -160,6 +201,26 @@
   font-weight: 100;
   font-size: 15px;
   font-style: normal;
+  margin-top: 10px;
+}
+
+/*====================Lista PDV====================*/
+.lista-pdv ul {
+  list-style-type: none;
+  padding: 0;
+  padding-top: 100px;
+}
+.lista-pdv li img {
+  vertical-align: top;
+  width: 20px;
+}
+
+.lista-pdv ul li {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+  font-style: normal;
+  margin-top: 5px;
 }
 
 /* Novo estilo para o texto-pdv */
@@ -191,11 +252,7 @@
 .tela3 {
   width: 80%;
 }
-.engrenagem-mesa {
-  width: 35px;
-  margin-right: 10px;
-  margin-bottom: 240px;
-}
+
 
 /* Media queries para ajustar o layout em telas menores */
 @media screen and (max-width: 1024px) {
@@ -337,6 +394,16 @@
 .container {
   align-items: flex-start; /* Alinha as listas ao topo do container */
 }
+.custom-content {
+  display: none; /* Inicialmente escondido */
+  opacity: 0; /* Transparente */
+  transition: opacity 0.5s ease-in-out; /* Transição suave para o aparecimento */
+}
+
+.custom-content.show {
+  display: flex; /* Mostrar o conteúdo */
+  opacity: 1; /* Opacidade total */
+}
 /* Alinhamento à esquerda nas media queries */
 @media (max-width: 1024px) { 
   .custom-content {
@@ -349,4 +416,21 @@
     text-align: left; /* Garante o alinhamento à esquerda em celulares */
   }
 }
+@media screen and (max-width: 768px) {
+  .custom-content {
+    flex-direction: column-reverse; /* Inverte a ordem dos elementos */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  .acesso p {
+    text-align: left; /* Alinha o texto à esquerda */
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@
 

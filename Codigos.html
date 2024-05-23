@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,900;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>ABC-X</title>
 </head>
@@ -22,11 +24,12 @@
     </div>
     <div id="custom-content1" class="custom-content flex-container">
       <img class="engrenagem" src="imgs/icons8-settings.svg" alt="Imagem 1">
+      <div class="vertical-line"></div>
       <div class="text1">
         <h1>ABC-X</h1>
-        <p>Gerencie todos os setores do seu negócio com o abcX, automatize processos e
+        <p id="text-principal">Gerencie todos os setores do seu negócio com o <span class="negritos">abcx</span> automatize processos e
           tenha controle de tudo.<br><br> Faça venda, emita documentos fiscais, controle 
-          seu estoque, gerencie sua equipe do pedido ao faturamento.<br><br> <b>abcX</b> é 
+          seu estoque, gerencie sua equipe do pedido ao faturamento.<br><br> <span class="negritos">abcx</span> é 
           descomplicado e intuitivo.</p>
       </div>
         <div class="container">
@@ -59,7 +62,7 @@
             </div>
           </div>
       <div id="custom-content1" class="acesso">
-        <p>Acesso de qualquer lugar do mundo: acompanhe seu caixa em tempo real e tenha o controle total do seu negócio.</p>
+        <p id="text-principal"><span class="negritos">Acesso de qualquer lugar do mundo</span>: acompanhe seu caixa em tempo real e tenha o controle total do seu negócio.</p>
         <img class="tela1" src="imgs/Tela 1 Sistema .png" alt="Imagem 1">
         <div class="saiba-mais">
           <div class="device-image">
@@ -71,39 +74,24 @@
     </div>
     <div id="custom-content2" class="custom-content flex-container">
       <img class="engrenagem" src="imgs/icons8-settings.svg" alt="Imagem 1">
+      <div class="vertical-line"></div>
       <div class="text1">
         <h1>PDV</h1>
-        <p>Faça vendas em instantes com o nosso 
-          ponto de vendas<br><br>Cadastre o na hora sem sair do 
+        <p id="text-principal">Faça vendas em instantes com o nosso 
+          <br>ponto de vendas<br><br>Cadastre o na hora sem sair do 
           PDV com o nosso cadastro 
           produto DIVERSO</p>
       </div>
         <div class="container">
-            <div class="lista">
-                <h2>Ferramentas</h2>
+            <div class="lista-pdv">
                 <ul>
-                    <li><img src="imgs/Checkbox.svg" alt="Check">Venda</li>
-                    <li><img src="imgs/Checkbox.svg" alt="Check">Estoque</li>
-                    <li><img src="imgs/Checkbox.svg" alt="Check">Financeiro</li>
-                    <li><img src="imgs/Checkbox.svg" alt="Check">Cadastro de Cliente</li>
-                </ul>
-            </div>
-            <div class="lista">
-                <h2>Funcionalidades</h2>
-                <ul>
-                    <li><img src="imgs/Checkbox.svg" alt="Check">PDV</li>
-                    <li><img src="imgs/Checkbox.svg" alt="Check">Mesa e Comanda</li>
-                    <li><img src="imgs/Checkbox.svg" alt="Check">Delivery</li>
-                    <li><img src="imgs/Checkbox.svg" alt="Check">Pedidos</li>
-                </ul>
-            </div>
-            <div class="lista">
-                <h2>Soluções</h2>
-                <ul>
-                    <li><img src="imgs/Checkbox.svg" alt="Check">APP Garçom</li>
-                    <li><img src="imgs/Checkbox.svg" alt="Check">Tablet na Mesa</li>
-                    <li><img src="imgs/Checkbox.svg" alt="Check">Sistema na Máquina POS</li>
-                    <li><img src="imgs/Checkbox.svg" alt="Check">Loja Online</li>
+                    <li><img src="imgs/Checkbox.svg" alt="Check">Venda rápida</li>
+                    <li><img src="imgs/Checkbox.svg" alt="Check">Caixa descomplicado</li>
+                    <li><img src="imgs/Checkbox.svg" alt="Check">Múltiplas formas de pagamento</li>
+                    <li><img src="imgs/Checkbox.svg" alt="Check">NFC-e / NF-e</li>
+                    <li><img src="imgs/Checkbox.svg" alt="Check">Orçamento direto do PDV</li>
+                    <li><img src="imgs/Checkbox.svg" alt="Check">TEF</li>
+                    <li><img src="imgs/Checkbox.svg" alt="Check">Integração com o PIX</li>
                 </ul>
             </div>
           </div>
@@ -115,12 +103,13 @@
           </div>
           <!-- Este botão sera implementado futuramente
             <button>Cadastrar</button>-->
-          <p>Todos os módulos são acompanhados por um poderoso retaguarda</p>
+          <!--<p>Todos os módulos são acompanhados por um poderoso retaguarda</p>-->
         </div>
       </div>
     </div>
     <div id="custom-content3" class="custom-content flex-container">
       <img class="engrenagem-mesa" src="imgs/icons8-settings.svg" alt="Imagem 1">
+      <div class="vertical-line"></div>
         <div class="text1">
           <h1>MESA</h1>
           <p>O Mapa de Mesas exibe uma visão geral de todo ambiente.
@@ -133,9 +122,18 @@
       </div>
     </div>
     <div id="custom-content4" class="custom-content flex-container">
-      <div class="text">
-        <h1>COMANDA</h1>
-        <p>COMANDA</p>
+      <img class="engrenagem-comanda" src="imgs/icons8-settings.svg" alt="Imagem 1">
+      <div class="vertical-line"></div>
+        <div class="text1">
+          <h1>COMANDA</h1>
+          <p>Gerencie suas comandas de forma eficiente e sem complicações.<br><br> Nosso sistema 
+            permite o controle completo das comandas, desde a abertura até o fechamento, 
+            garantindo uma operação organizada e precisa.<br><br> <b>Reduza</b> erros e melhore o atendimento 
+            ao cliente com nossa solução intuitiva.</p>
+            <!--<button>Saiba Mais</button>-->
+        </div>
+        <div id="custom-content1" class="acesso">
+          <img class="tela3" src="imgs/Comanda.png" alt="Imagem 1">
       </div>
     </div>
     <div id="custom-content5" class="custom-content flex-container">
