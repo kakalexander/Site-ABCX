@@ -30,7 +30,7 @@ function showContent(buttonNumber) {
   }
 
   // Rolagem suave para o conteúdo
-  contentToShow.scrollIntoView({ behavior: 'smooth' });
+  //contentToShow.scrollIntoView({ behavior: 'smooth' });
 }
 
 // Exibe o conteúdo do botão 1 ao carregar a página
