@@ -43,10 +43,7 @@
   outline: none;
 }
 
-.custom-button:hover {
-  background-color: #F49920;
-}
-
+.custom-button:hover,
 .custom-button.clicked {
   background-color: #F49920;
 }
@@ -84,22 +81,20 @@
 }
 
 /* =====================Estilo da Engrenagem===================== */
-.engrenagem {
-  width: 35px;
-  margin-right: 10px;
-  margin-left: 50px;
-  margin-bottom: 160px;
-}
-
-.engrenagem-mesa {
-  width: 35px;
-  margin-right: 10px;
-  margin-bottom: 150px;
-}
-
+.engrenagem,
+.engrenagem-mesa,
 .engrenagem-comanda {
   width: 35px;
   margin-right: 10px;
+  margin-left: 50px;
+}
+
+.engrenagem {
+  margin-bottom: 160px;
+}
+
+.engrenagem-mesa,
+.engrenagem-comanda {
   margin-bottom: 150px;
 }
 
@@ -108,7 +103,6 @@
   height: 150px;
   background-color: #000;
   margin-top: -150px;
-
 }
 
 /* =====================Imagem do Sistema===================== */
@@ -188,7 +182,6 @@
 .lista ul {
   list-style-type: none;
   padding: 0;
-  padding-top: 0px;
   margin: 30px;
 }
 
@@ -254,6 +247,7 @@
 .tela3 {
   width: 80%;
 }
+
 /*================================= Tela Delivery =====================*/
 .lista-delivery ul {
   list-style-type: none;
@@ -273,6 +267,7 @@
   font-style: normal;
   margin-top: 5px;
 }
+
 /*================================= Slide Delivery =====================*/
 section.slider {
   margin: auto;
@@ -281,61 +276,68 @@ section.slider {
   padding: 0 !important;
   overflow: hidden;
 }
-.slider-content{
+
+.slider-content {
   width: 400%;
   height: auto;
   display: flex;
-  
 }
-.slider-content input, .img-mobile{
+
+.slider-content input,
+.img-mobile {
   display: none;
-  
 }
+
 .slide-box {
   width: 25%;
   height: auto;
   position: relative;
   text-align: center;
   transition: 1s;
-  
 }
+
 .slide-box img {
   width: 100%;
-  
 }
-.nav-manual, .nav-auto {
+
+.nav-manual,
+.nav-auto {
   position: absolute;
   width: 100%;
   margin-top: 24%;
   display: flex;
   margin-left: 17%;
-  
 }
-.nav-manual .manual-btn, .nav-auto div {
+
+.nav-manual .manual-btn,
+.nav-auto div {
   border: 2px solid #F39716;
   padding: 6px;
   border-radius: 50%;
   cursor: pointer;
-  
 }
-.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child) {
+
+.nav-manual .manual-btn:not(:last-child),
+.nav-auto div:not(:last-child) {
   margin-right: 10px;
-  
 }
+
 .nav-manual .manual-btn:hover {
   background-color: #F39716;
-  
 }
-#radio1:checked ~ .nav-auto .auto-btn1, #radio2:checked ~ .nav-auto .auto-btn2, #radio3:checked ~ .nav-auto .auto-btn3{
+
+#radio1:checked ~ .nav-auto .auto-btn1,
+#radio2:checked ~ .nav-auto .auto-btn2,
+#radio3:checked ~ .nav-auto .auto-btn3 {
   background-color: #F39716;
 }
-#radio2:checked ~ .primeiro{
-  margin-left: -25%;
 
+#radio2:checked ~ .primeiro {
+  margin-left: -25%;
 }
-#radio3:checked ~ .primeiro{
+
+#radio3:checked ~ .primeiro {
   margin-left: -50%;
-  
 }
 
 /* =====================Media Queries===================== */
@@ -347,119 +349,31 @@ section.slider {
 
   .text1 {
     padding: 0 20px 50px;
-  }
-
-  .engrenagem {
-    margin-bottom: 20px;
-  }
-
-  .acesso img,
-  .tela3 {
-    margin-left: 0;
-    max-width: 100%;
-  }
-
-  .container {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-    width: 90%;
-    padding: 0;
-    margin-left: 0;
-    position: relative;
-  }
-
-  .lista {
-    margin-bottom: 20px;
-    margin-right: 0;
-  }
-
-  .acesso p {
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .saiba-mais button {
-    margin-left: 0;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .custom-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .text1 {
-    padding: 0 20px 20px;
-  }
-
-  .engrenagem {
-    margin-bottom: 20px;
-  }
-
-  .acesso img,
-  .tela3 {
-    margin-left: 0;
-    max-width: 100%;
-  }
-
-  .container {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-    width: 90%;
-    padding: 0;
-    margin-left: 0;
-    position: relative;
-  }
-
-  .lista {
-    margin-bottom: 20px;
-    margin-right: 0;
-  }
-
-  .acesso p {
-    margin-left: 0;
-    text-align: left;
-  }
-
-  .saiba-mais button {
-    margin-left: 0;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .custom-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .acesso img {
-    margin-left: 0;
-    max-width: 100%;
-  }
-
-  .saiba-mais button {
-    margin-left: 0;
-  }
-
-  .text1 {
-    padding: 0 20px 20px;
+    text-align: left; /* Alinha o texto principal à esquerda */
   }
 
   .text1 h1 {
-    text-align: left;
+    text-align: left; /* Alinha o título à esquerda */
+  }
+
+  .engrenagem {
+    margin-bottom: 20px;
+  }
+
+  .acesso img,
+  .tela3 {
+    margin-left: 0;
+    max-width: 100%;
   }
 
   .acesso p {
-    text-align: left;
     margin-left: 0;
+    text-align: left; /* Alinha o parágrafo à esquerda */
   }
 
   .container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     margin-top: 50px;
     width: 90%;
     padding: 0;
@@ -470,18 +384,45 @@ section.slider {
   .lista {
     margin-bottom: 20px;
     margin-right: 0;
-    text-align: left;
+    text-align: left; /* Alinha o texto da lista à esquerda */
   }
-}
 
-/* =====================Transição Suave===================== */
-.custom-content {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
+  .vertical-line {
+    display: none;
+  }
 
-.custom-content.show {
-  display: flex;
-  opacity: 1;
+  .engrenagem,
+  .engrenagem-mesa,
+  .engrenagem-comanda {
+    margin: 20px auto;
+  }
+
+  .custom-buttons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .custom-button {
+    margin: 10px 0;
+  }
+
+  .saiba-mais button {
+    margin-left: 0;
+  }
+
+  .lista h2 {
+    text-align: left; /* Alinha o título da lista à esquerda */
+  }
+
+  .lista ul li {
+    text-align: left; /* Alinha os itens da lista à esquerda */
+  }
+
+  .lista-pdv ul li {
+    text-align: left; /* Alinha os itens da lista PDV à esquerda */
+  }
+
+  .lista-delivery ul li {
+    text-align: left; /* Alinha os itens da lista delivery à esquerda */
+  }
 }
