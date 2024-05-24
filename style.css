@@ -1,4 +1,4 @@
-/*===============================Estilo da página===================================*/
+/* =========================Estilo Global===================== */
 .custom-container {
   height: 100%;
   margin: 0;
@@ -8,16 +8,21 @@
   flex-direction: column;
 }
 
-/*==================================Estilo dos botões=======================================*/
+.custom-content {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  text-align: left;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+/* ========================Estilo dos Botões====================== */
 .custom-buttons-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
-  /* Função para deixar os botões fixos 
-  position:fixed;
-  top: 0;  Posição no topo da página 
-  left: 10;  Posição à esquerda da página */
 }
 
 .custom-button {
@@ -46,18 +51,7 @@
   background-color: #F49920;
 }
 
-/* =========================Estilo do conteúdo=====================*/
-.custom-content {
-  display: flex;
-  flex-direction: row;
-  max-width: 100%;
-  text-align: left;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 20px;
-}
-
-/*======================= Estilo do Texto Principal (Gerencia todos...)===================*/
+/* =======================Estilo do Texto Principal====================== */
 .text1 {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -65,59 +59,66 @@
   width: 100%;
   padding: 0 40px 230px;
 }
+
 .text1 h1 {
-    font-size: 40px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-    color: #0a212c;
+  font-size: 40px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  color: #0a212c;
+  text-align: left; /* Alinha o título à esquerda */
 }
+
 .negritos {
   color: #0a212c;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
-  font-style: normal; 
-}
-#text-principal {
-  font-size: 17px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: normal;
+  font-style: normal;
 }
 
-/*=====================Engrenagem====================== */
+#text-principal {
+  font-size: 17px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* =====================Estilo da Engrenagem===================== */
 .engrenagem {
   width: 35px;
   margin-right: 10px;
-  margin-left: 50px ;
+  margin-left: 50px;
   margin-bottom: 160px;
 }
+
 .engrenagem-mesa {
   width: 35px;
   margin-right: 10px;
   margin-bottom: 150px;
 }
+
 .engrenagem-comanda {
   width: 35px;
   margin-right: 10px;
   margin-bottom: 150px;
 }
+
 .vertical-line {
   width: 1px;
   height: 150px;
-  background-color: #000; /* cor da linha */
+  background-color: #000;
+  margin-top: -150px;
 
-  margin-top: -150px; /* espaçamento ao redor da linha */
 }
 
-/*==================== Imagem do sitema (direita)============================= */
+/* =====================Imagem do Sistema===================== */
 .acesso img {
   max-width: 80%;
   height: auto;
   margin-left: 140px;
 }
 
-/* ===================Ajuste texto(Direita)===================*/
+/* =====================Ajuste de Texto===================== */
 .acesso p {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -126,7 +127,7 @@
   margin-left: 140px;
 }
 
-/* Saiba mais */
+/* =====================Saiba Mais===================== */
 .saiba-mais {
   margin-top: 20px;
   text-align: center;
@@ -137,7 +138,6 @@
   width: 100px;
 }
 
-/* Botão saiba mais */
 .saiba-mais button {
   background-color: #153749;
   border: none;
@@ -159,7 +159,7 @@
   background-color: #F49920;
 }
 
-/* Container PAI listas (Ferramentas, Funcionalidades, Soluções) */
+/* =====================Container Pai===================== */
 .container {
   display: flex;
   flex-direction: row;
@@ -191,6 +191,7 @@
   padding-top: 0px;
   margin: 30px;
 }
+
 .lista li img {
   vertical-align: top;
   width: 20px;
@@ -204,12 +205,13 @@
   margin-top: 10px;
 }
 
-/*====================Lista PDV====================*/
+/* =====================Lista PDV===================== */
 .lista-pdv ul {
   list-style-type: none;
   padding: 0;
   padding-top: 100px;
 }
+
 .lista-pdv li img {
   vertical-align: top;
   width: 20px;
@@ -223,7 +225,7 @@
   margin-top: 5px;
 }
 
-/* Novo estilo para o texto-pdv */
+/* =====================Texto PDV===================== */
 #texto-pdv {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -231,7 +233,7 @@
   margin-right: 1000px;
 }
 
-/* Tela MESA */
+/* =====================Tela Mesa===================== */
 .text1 button {
   background-color: #F39716;
   border: none;
@@ -252,9 +254,91 @@
 .tela3 {
   width: 80%;
 }
+/*================================= Tela Delivery =====================*/
+.lista-delivery ul {
+  list-style-type: none;
+  padding: 0;
+  padding-top: 10px;
+}
 
+.lista-delivery li img {
+  vertical-align: top;
+  width: 20px;
+}
 
-/* Media queries para ajustar o layout em telas menores */
+.lista-delivery ul li {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+  font-style: normal;
+  margin-top: 5px;
+}
+/*================================= Slide Delivery =====================*/
+section.slider {
+  margin: auto;
+  width: 80%;
+  height: auto;
+  padding: 0 !important;
+  overflow: hidden;
+}
+.slider-content{
+  width: 400%;
+  height: auto;
+  display: flex;
+  
+}
+.slider-content input, .img-mobile{
+  display: none;
+  
+}
+.slide-box {
+  width: 25%;
+  height: auto;
+  position: relative;
+  text-align: center;
+  transition: 1s;
+  
+}
+.slide-box img {
+  width: 100%;
+  
+}
+.nav-manual, .nav-auto {
+  position: absolute;
+  width: 100%;
+  margin-top: 24%;
+  display: flex;
+  margin-left: 17%;
+  
+}
+.nav-manual .manual-btn, .nav-auto div {
+  border: 2px solid #F39716;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  
+}
+.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child) {
+  margin-right: 10px;
+  
+}
+.nav-manual .manual-btn:hover {
+  background-color: #F39716;
+  
+}
+#radio1:checked ~ .nav-auto .auto-btn1, #radio2:checked ~ .nav-auto .auto-btn2, #radio3:checked ~ .nav-auto .auto-btn3{
+  background-color: #F39716;
+}
+#radio2:checked ~ .primeiro{
+  margin-left: -25%;
+
+}
+#radio3:checked ~ .primeiro{
+  margin-left: -50%;
+  
+}
+
+/* =====================Media Queries===================== */
 @media screen and (max-width: 1024px) {
   .custom-content {
     flex-direction: column;
@@ -269,7 +353,8 @@
     margin-bottom: 20px;
   }
 
-  .acesso img, .tela3 {
+  .acesso img,
+  .tela3 {
     margin-left: 0;
     max-width: 100%;
   }
@@ -313,7 +398,8 @@
     margin-bottom: 20px;
   }
 
-  .acesso img, .tela3 {
+  .acesso img,
+  .tela3 {
     margin-left: 0;
     max-width: 100%;
   }
@@ -335,7 +421,7 @@
 
   .acesso p {
     margin-left: 0;
-    text-align: center;
+    text-align: left;
   }
 
   .saiba-mais button {
@@ -349,22 +435,31 @@
     text-align: center;
   }
 
-  .text1 {
-    padding: 0 20px 20px;
-  }
-
-  .engrenagem {
-    margin-bottom: 20px;
-  }
-
-  .acesso img, .tela3 {
+  .acesso img {
     margin-left: 0;
     max-width: 100%;
   }
 
+  .saiba-mais button {
+    margin-left: 0;
+  }
+
+  .text1 {
+    padding: 0 20px 20px;
+  }
+
+  .text1 h1 {
+    text-align: left;
+  }
+
+  .acesso p {
+    text-align: left;
+    margin-left: 0;
+  }
+
   .container {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 50px;
     width: 90%;
     padding: 0;
@@ -375,62 +470,18 @@
   .lista {
     margin-bottom: 20px;
     margin-right: 0;
-  }
-
-  .acesso p {
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .saiba-mais button {
-    margin-left: 0;
+    text-align: left;
   }
 }
-/* Alinhamento à esquerda para textos e listas */
+
+/* =====================Transição Suave===================== */
 .custom-content {
-  text-align: left; /* Alinha o texto do conteúdo à esquerda */
-}
-
-.container {
-  align-items: flex-start; /* Alinha as listas ao topo do container */
-}
-.custom-content {
-  display: none; /* Inicialmente escondido */
-  opacity: 0; /* Transparente */
-  transition: opacity 0.5s ease-in-out; /* Transição suave para o aparecimento */
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .custom-content.show {
-  display: flex; /* Mostrar o conteúdo */
-  opacity: 1; /* Opacidade total */
+  display: flex;
+  opacity: 1;
 }
-/* Alinhamento à esquerda nas media queries */
-@media (max-width: 1024px) { 
-  .custom-content {
-    text-align: left; /* Garante o alinhamento à esquerda em tablets e desktops */
-  }
-}
-
-@media (max-width: 480px) {
-  .custom-content {
-    text-align: left; /* Garante o alinhamento à esquerda em celulares */
-  }
-}
-@media screen and (max-width: 768px) {
-  .custom-content {
-    flex-direction: column-reverse; /* Inverte a ordem dos elementos */
-    align-items: center; /* Centraliza os itens */
-  }
-
-  .acesso p {
-    text-align: left; /* Alinha o texto à esquerda */
-  }
-
-  .container {
-    width: 100%;
-    padding: 0 20px;
-  }
-}
-
-
-
