@@ -72,6 +72,12 @@
   font-weight: 900;
   font-style: normal;
 }
+.destaque {
+  color: #F49920;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
 
 #text-principal {
   font-size: 17px;
@@ -332,6 +338,19 @@ section.slider {
   background-color: #F39716;
 }
 
+#vendas1:checked ~ .nav-auto .auto-btn1,
+#vendas2:checked ~ .nav-auto .auto-btn2{
+  background-color: #F39716;
+}
+
+#vendas2:checked ~ .primeiro {
+  margin-left: -25%;
+}
+
+#vendas3:checked ~ .primeiro {
+  margin-left: -50%;
+}
+
 #radio2:checked ~ .primeiro {
   margin-left: -25%;
 }
@@ -339,6 +358,7 @@ section.slider {
 #radio3:checked ~ .primeiro {
   margin-left: -50%;
 }
+
 
 /* =====================Media Queries===================== */
 @media screen and (max-width: 1024px) {

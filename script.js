@@ -37,18 +37,27 @@ function showContent(buttonNumber) {
 document.addEventListener('DOMContentLoaded', function() {
   showContent(1);
 });
+
+//Slide tela de DELIVERY
 var radio = document.querySelector('.manual-btn')
 var cont = 1
 
-document.getElementById('radio1').checked = true
+document.getElementById('radio1', 'vendas1').checked = true
 setInterval(() => {
   proximaImg()
-},5000)
+},3000)
 function proximaImg(){
   cont++
 
   if(cont > 3 ){
     cont = 1
   }
+  
   document.getElementById('radio'+cont).checked = true
 }
+
+
+
+
+
+
