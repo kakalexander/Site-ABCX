@@ -16,7 +16,11 @@
   align-items: center;
   justify-content: flex-start;
   padding: 20px;
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
+
 
 /* ========================Estilo dos Botões====================== */
 .custom-buttons-container {
@@ -92,11 +96,11 @@
 .engrenagem-comanda {
   width: 35px;
   margin-right: 10px;
-  margin-left: 50px;
+  margin-left: 0px;
 }
 
 .engrenagem {
-  margin-bottom: 160px;
+  margin-bottom: 10px;
 }
 
 .engrenagem-mesa,
@@ -104,13 +108,13 @@
   margin-bottom: 150px;
 }
 
-.vertical-line {
+/*.vertical-line {
   width: 1px;
   height: 150px;
   background-color: #000;
   margin-top: -150px;
 }
-
+*/
 /* =====================Imagem do Sistema===================== */
 .acesso img {
   max-width: 80%;
@@ -173,7 +177,7 @@
 }
 
 .lista {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .lista h2 {
@@ -196,12 +200,18 @@
   width: 20px;
 }
 
+/* Alteração para aumentar e diminuir o tamanho do texto ao passar o mouse */
 .lista ul li {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 15px;
   font-style: normal;
   margin-top: 10px;
+  transition: font-size 0.3s ease;
+}
+
+.lista ul li:hover {
+  font-size: 18px; /* Novo tamanho do texto ao passar o mouse */
 }
 
 /* =====================Lista PDV===================== */
@@ -216,12 +226,21 @@
   width: 20px;
 }
 
+/* Alteração para aumentar e diminuir o tamanho do texto ao passar o mouse */
 .lista-pdv ul li {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 15px;
   font-style: normal;
   margin-top: 5px;
+  transition: font-size 0.3s ease;
+}
+
+.lista-pdv ul li:hover {
+  font-size: 18px; /* Novo tamanho do texto ao passar o mouse */
+}
+.lista-pdv li {
+  margin-left: 20px;
 }
 
 /* =====================Texto PDV===================== */
@@ -229,7 +248,7 @@
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: normal;
-  margin-right: 1000px;
+  margin-right: 100px;
 }
 
 /* =====================Tela Mesa===================== */
@@ -254,7 +273,7 @@
   width: 80%;
 }
 
-/*================================= Tela Delivery =====================*/
+/* =====================Lista Delivery===================== */
 .lista-delivery ul {
   list-style-type: none;
   padding: 0;
@@ -266,15 +285,21 @@
   width: 20px;
 }
 
+/* Alteração para aumentar e diminuir o tamanho do texto ao passar o mouse */
 .lista-delivery ul li {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 15px;
   font-style: normal;
   margin-top: 5px;
+  transition: font-size 0.3s ease;
 }
 
-/*================================= Slide Delivery =====================*/
+.lista-delivery ul li:hover {
+  font-size: 18px; /* Novo tamanho do texto ao passar o mouse */
+}
+
+/* =====================Slide Delivery===================== */
 section.slider {
   margin: auto;
   width: 80%;
@@ -348,7 +373,7 @@ section.slider {
 }
 
 #vendas3:checked ~ .primeiro {
-  margin-left: -50%;
+  margin-left: -50%;  
 }
 
 #radio2:checked ~ .primeiro {
@@ -359,6 +384,15 @@ section.slider {
   margin-left: -50%;
 }
 
+/* ==========Animação aparecer========== */
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0.3;
+  }
+  100% {
+      opacity: 1;
+   }
+}
 
 /* =====================Media Queries===================== */
 @media screen and (max-width: 1024px) {
@@ -406,11 +440,11 @@ section.slider {
     margin-right: 0;
     text-align: left; /* Alinha o texto da lista à esquerda */
   }
-
+/* Futuramente adiciona
   .vertical-line {
     display: none;
   }
-
+*/
   .engrenagem,
   .engrenagem-mesa,
   .engrenagem-comanda {
