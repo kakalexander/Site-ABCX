@@ -96,11 +96,11 @@
 .engrenagem-comanda {
   width: 35px;
   margin-right: 10px;
-  margin-left: 0px;
+  margin-left: 35px;
 }
 
 .engrenagem {
-  margin-bottom: 10px;
+  margin-bottom: 150px;
 }
 
 .engrenagem-mesa,
@@ -119,7 +119,7 @@
 .acesso img {
   max-width: 80%;
   height: auto;
-  margin-left: 140px;
+  margin-left: 100px;
 }
 
 /* =====================Ajuste de Texto===================== */
@@ -128,7 +128,7 @@
   font-weight: 500;
   font-style: normal;
   margin-top: 50px;
-  margin-left: 140px;
+  margin-left: 100px;
 }
 
 /* =====================Saiba Mais===================== */
@@ -207,12 +207,12 @@
   font-size: 15px;
   font-style: normal;
   margin-top: 10px;
-  transition: font-size 0.3s ease;
+  /*transition: font-size 0.3s ease;*/
 }
 
-.lista ul li:hover {
-  font-size: 18px; /* Novo tamanho do texto ao passar o mouse */
-}
+/*.lista ul li:hover {
+  font-size: 18px; /* Novo tamanho do texto ao passar o mouse 
+}*/
 
 /* =====================Lista PDV===================== */
 .lista-pdv ul {
