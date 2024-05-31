@@ -38,47 +38,62 @@ document.addEventListener('DOMContentLoaded', function() {
   showContent(1);
 });
 
-
 document.addEventListener('DOMContentLoaded', function() {
-  let index = 0;
-  const images = document.querySelectorAll('.carrossel-img');
-  const indicators = document.querySelectorAll('.indicator');
-  const totalImages = images.length;
-  let interval;
+  // Configuração dos carrosséis
+  const carousels = [
+    { images: document.querySelectorAll('.carrossel-img'), indicators: document.querySelectorAll('.indicator') },
+    { images: document.querySelectorAll('.carrossel-img2'), indicators: document.querySelectorAll('.indicator2') },
+    { images: document.querySelectorAll('.carrossel-img3'), indicators: document.querySelectorAll('.indicator3') },
+    { images: document.querySelectorAll('.carrossel-img4'), indicators: document.querySelectorAll('.indicator4') }
+  ];
 
-  function showImage(index) {
-    images.forEach((img, i) => {
+  // Função para mostrar a imagem no carrossel específico
+  function showImage(index, carousel) {
+    carousel.images.forEach((img, i) => {
       if (i === index) {
         img.classList.add('active', 'slide-right');
       } else {
         img.classList.remove('active', 'slide-right');
       }
-      indicators[i].classList.toggle('active', i === index);
+      carousel.indicators[i].classList.toggle('active', i === index);
     });
   }
 
-  function nextImage() {
-    index = (index + 1) % totalImages;
-    showImage(index);
+  // Função para avançar para a próxima imagem no carrossel específico
+  function nextImage(carousel) {
+    let index = 0;
+    return function() {
+      index = (index + 1) % carousel.images.length;
+      showImage(index, carousel);
+    };
   }
 
-  function startCarousel() {
-    interval = setInterval(nextImage, 5000);
+  // Função para iniciar o carrossel
+  function startCarousel(carousel) {
+    const interval = setInterval(nextImage(carousel), 5000);
+    return interval;
   }
 
-  function stopCarousel() {
+  // Função para parar o carrossel
+  function stopCarousel(interval) {
     clearInterval(interval);
   }
 
-  indicators.forEach((indicator, i) => {
-    indicator.addEventListener('click', () => {
-      stopCarousel();
-      index = i;
-      showImage(index);
-      startCarousel();
-    });
-  });
+  // Inicialização de cada carrossel
+  carousels.forEach(carousel => {
+    let interval;
 
-  showImage(index);
-  startCarousel();
+    // Event listeners para os indicadores de cada carrossel
+    carousel.indicators.forEach((indicator, i) => {
+      indicator.addEventListener('click', () => {
+        stopCarousel(interval);
+        showImage(i, carousel);
+        interval = startCarousel(carousel);
+      });
+    });
+
+    // Mostra a primeira imagem de cada carrossel e inicia o carrossel
+    showImage(0, carousel);
+    interval = startCarousel(carousel);
+  });
 });

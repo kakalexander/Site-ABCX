@@ -92,9 +92,13 @@ body{
 }
 
 
-/* =====================Saiba Mais===================== */
+/* ===================== Botao Saiba Mais===================== */
 
-
+.botao-saiba-mais{
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
 .saiba-mais {
   background-color: #153749;
   border: none;
@@ -112,7 +116,7 @@ body{
   background-color: #F49920;
 }
 
-/* =====================Container Pai===================== */
+/* =====================Container Listas===================== */
 
 .lista-contain {
   display: flex;
@@ -129,7 +133,7 @@ body{
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-style: normal;
-  font-size: 20px;
+  font-size: 22px;
   margin: 0; /* Remove margem padrão */
   padding-left: 10px; /* Ajusta o preenchimento à esquerda */
 }
@@ -143,12 +147,17 @@ body{
 .lista li {
   display: flex;
   align-items: center; /* Centraliza verticalmente a imagem e o texto */
+  padding-top: 5px;
+  font-size: 17px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .lista li img {
   vertical-align: top;
-  width: 20px;
-  margin-right: 10px; /* Espaço entre a imagem e o texto */
+  width: 15px;
+  margin-right: 2px; /* Espaço entre a imagem e o texto */
 }
 
 /*=============== Imagem tamanhos ========================= */
@@ -161,13 +170,14 @@ body{
   padding-top: 100px;
 }
 
-.carrossel-img {
+.carrossel-img, .carrossel-img2, .carrossel-img3, .carrossel-img4 {
   width: 100%;
   display: none;
   transition: transform 1s ease; /* Adiciona transição para suavizar o efeito */
 }
 
-.carrossel-img.active {
+
+.carrossel-img.active, .carrossel-img2.active, .carrossel-img3.active, .carrossel-img4.active{
   display: block;
   transform: translateX(0); /* Garante que a imagem ativa esteja visível */
 }
@@ -181,7 +191,7 @@ body{
   gap: 5px;
 }
 
-.indicator {
+.indicator, .indicator2, .indicator3, .indicator4 {
   width: 10px;
   height: 10px;
   background-color: rgba(255, 255, 255, 0.5);
@@ -189,9 +199,10 @@ body{
   cursor: pointer;
 }
 
-.indicator.active {
+.indicator.active, .indicator2.active, .indicator3.active, .indicator4.active {
   background-color: #F39716;
 }
+
 
 .slide-right {
   animation: slideRight 1s forwards;
@@ -218,8 +229,12 @@ body{
   transform: translateX(-50%);
   width: 100px;
 }
+
 .engrenagem img{
   padding-top: 160px;
+}
+.engrenagem-pdv img{
+  padding-top: 80px;
 }
 
 /* =====================Slide Delivery===================== 
