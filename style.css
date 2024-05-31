@@ -1,3 +1,6 @@
+body {
+  overflow: hidden;
+}
 /* =========================Estilo Global===================== */
 .custom-container {
   height: 100%;
@@ -11,16 +14,18 @@
 .custom-content {
   display: flex;
   flex-direction: row;
-  max-width: 100%;
+  max-width: 90%;
   text-align: left;
   align-items: center;
-  justify-content: flex-start;
   padding: 20px;
   animation: fadeInAnimation ease 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
-
+#slider-content{
+  max-width: 50%;
+  margin-bottom: 170px;
+}
 
 /* ========================Estilo dos Botões====================== */
 .custom-buttons-container {
@@ -88,6 +93,7 @@
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: normal;
+  max-width: 500px;
 }
 
 /* =====================Estilo da Engrenagem===================== */
@@ -108,28 +114,6 @@
   margin-bottom: 150px;
 }
 
-/*.vertical-line {
-  width: 1px;
-  height: 150px;
-  background-color: #000;
-  margin-top: -150px;
-}
-*/
-/* =====================Imagem do Sistema===================== */
-.acesso img {
-  max-width: 80%;
-  height: auto;
-  margin-left: 100px;
-}
-
-/* =====================Ajuste de Texto===================== */
-.acesso p {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  margin-top: 50px;
-  margin-left: 100px;
-}
 
 /* =====================Saiba Mais===================== */
 .saiba-mais {
@@ -142,7 +126,7 @@
   width: 100px;
 }
 
-.saiba-mais button {
+.saiba-mais {
   background-color: #153749;
   border: none;
   color: white;
@@ -153,10 +137,6 @@
   cursor: pointer;
   border-radius: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, .60);
-  max-width: 200px;
-  width: auto;
-  outline: none;
-  margin-left: 17%;
 }
 
 .saiba-mais button:hover {
@@ -164,35 +144,27 @@
 }
 
 /* =====================Container Pai===================== */
-.container {
+.dispositivos img {
+  width: 15%;
+  margin-left: 330px;
+}
+
+.lista-container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-top: 350px;
-  width: 70%;
-  padding: 0px 0px 200px;
-  margin-left: 5%;
   position: absolute;
+  top: 80%;
+  left: 30%;
 }
-
-.lista {
-  margin-right: 20px;
-}
-
 .lista h2 {
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-style: normal;
   font-size: 20px;
-  padding-top: 100px;
-  margin: 30px;
 }
 
 .lista ul {
   list-style-type: none;
-  padding: 0;
-  margin: 30px;
 }
 
 .lista li img {
@@ -206,13 +178,8 @@
   font-weight: 100;
   font-size: 15px;
   font-style: normal;
-  margin-top: 10px;
-  /*transition: font-size 0.3s ease;*/
+  margin-top: 10px; 
 }
-
-/*.lista ul li:hover {
-  font-size: 18px; /* Novo tamanho do texto ao passar o mouse 
-}*/
 
 /* =====================Lista PDV===================== */
 .lista-pdv ul {
@@ -302,7 +269,7 @@
 /* =====================Slide Delivery===================== */
 section.slider {
   margin: auto;
-  width: 80%;
+  width: 70%;
   height: auto;
   padding: 0 !important;
   overflow: hidden;
@@ -440,11 +407,7 @@ section.slider {
     margin-right: 0;
     text-align: left; /* Alinha o texto da lista à esquerda */
   }
-/* Futuramente adiciona
-  .vertical-line {
-    display: none;
-  }
-*/
+
   .engrenagem,
   .engrenagem-mesa,
   .engrenagem-comanda {
