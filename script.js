@@ -38,25 +38,47 @@ document.addEventListener('DOMContentLoaded', function() {
   showContent(1);
 });
 
-//Slide tela de DELIVERY
-var radio = document.querySelector('.manual-btn')
-var cont = 1
 
-document.getElementById('radio1', 'vendas1').checked = true
-setInterval(() => {
-  proximaImg()
-},3000)
-function proximaImg(){
-  cont++
+document.addEventListener('DOMContentLoaded', function() {
+  let index = 0;
+  const images = document.querySelectorAll('.carrossel-img');
+  const indicators = document.querySelectorAll('.indicator');
+  const totalImages = images.length;
+  let interval;
 
-  if(cont > 3 ){
-    cont = 1
+  function showImage(index) {
+    images.forEach((img, i) => {
+      if (i === index) {
+        img.classList.add('active', 'slide-right');
+      } else {
+        img.classList.remove('active', 'slide-right');
+      }
+      indicators[i].classList.toggle('active', i === index);
+    });
   }
-  
-  document.getElementById('radio'+cont).checked = true
-}
 
+  function nextImage() {
+    index = (index + 1) % totalImages;
+    showImage(index);
+  }
 
+  function startCarousel() {
+    interval = setInterval(nextImage, 5000);
+  }
 
+  function stopCarousel() {
+    clearInterval(interval);
+  }
 
+  indicators.forEach((indicator, i) => {
+    indicator.addEventListener('click', () => {
+      stopCarousel();
+      index = i;
+      showImage(index);
+      startCarousel();
+    });
+  });
 
+  showImage(index);
+  startCarousel();
+});

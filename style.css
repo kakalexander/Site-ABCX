@@ -1,31 +1,23 @@
-body {
-  overflow: hidden;
+body{
+    background-color: rgb(255, 255, 255);
+    color: #153749;
+    font-family: poppinsregular;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 15px;
 }
+
+
 /* =========================Estilo Global===================== */
-.custom-container {
+.custom-content {
   height: 100%;
   margin: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
-.custom-content {
-  display: flex;
-  flex-direction: row;
-  max-width: 90%;
-  text-align: left;
-  align-items: center;
-  padding: 20px;
-  animation: fadeInAnimation ease 1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-#slider-content{
-  max-width: 50%;
-  margin-bottom: 170px;
-}
+
 
 /* ========================Estilo dos Botões====================== */
 .custom-buttons-container {
@@ -57,13 +49,16 @@ body {
   background-color: #F49920;
 }
 
+
 /* =======================Estilo do Texto Principal====================== */
 .text1 {
+  width: 50%;
+  height: 50%;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: normal;
-  width: 100%;
   padding: 0 40px 230px;
+  
 }
 
 .text1 h1 {
@@ -72,7 +67,7 @@ body {
   font-weight: 900;
   font-style: normal;
   color: #0a212c;
-  text-align: left; /* Alinha o título à esquerda */
+  text-align: left; /* Alinha o título à esquerda*/ 
 }
 
 .negritos {
@@ -96,35 +91,9 @@ body {
   max-width: 500px;
 }
 
-/* =====================Estilo da Engrenagem===================== */
-.engrenagem,
-.engrenagem-mesa,
-.engrenagem-comanda {
-  width: 35px;
-  margin-right: 10px;
-  margin-left: 35px;
-}
-
-.engrenagem {
-  margin-bottom: 150px;
-}
-
-.engrenagem-mesa,
-.engrenagem-comanda {
-  margin-bottom: 150px;
-}
-
 
 /* =====================Saiba Mais===================== */
-.saiba-mais {
-  margin-top: 20px;
-  text-align: center;
-  position: relative;
-}
 
-.saiba-mais img {
-  width: 100px;
-}
 
 .saiba-mais {
   background-color: #153749;
@@ -144,129 +113,116 @@ body {
 }
 
 /* =====================Container Pai===================== */
-.dispositivos img {
-  width: 15%;
-  margin-left: 330px;
-}
 
-.lista-container {
+.lista-contain {
   display: flex;
   flex-direction: row;
-  position: absolute;
-  top: 80%;
-  left: 30%;
+  justify-content: space-around; /* Alinha as listas de forma uniforme no contêiner */
+  padding-top: 90px;
 }
+
+.lista {
+  flex: 1; /* Faz com que cada lista tenha a mesma largura */
+}
+
 .lista h2 {
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-style: normal;
   font-size: 20px;
+  margin: 0; /* Remove margem padrão */
+  padding-left: 10px; /* Ajusta o preenchimento à esquerda */
 }
 
 .lista ul {
   list-style-type: none;
+  padding-left: 10px; /* Ajusta o preenchimento à esquerda */
+  margin: 0; /* Remove margem padrão */
+}
+
+.lista li {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente a imagem e o texto */
 }
 
 .lista li img {
   vertical-align: top;
   width: 20px;
+  margin-right: 10px; /* Espaço entre a imagem e o texto */
 }
 
-/* Alteração para aumentar e diminuir o tamanho do texto ao passar o mouse */
-.lista ul li {
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-size: 15px;
-  font-style: normal;
-  margin-top: 10px; 
-}
+/*=============== Imagem tamanhos ========================= */
 
-/* =====================Lista PDV===================== */
-.lista-pdv ul {
-  list-style-type: none;
-  padding: 0;
+.imagem-carrossel {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
   padding-top: 100px;
 }
 
-.lista-pdv li img {
-  vertical-align: top;
-  width: 20px;
+.carrossel-img {
+  width: 100%;
+  display: none;
+  transition: transform 1s ease; /* Adiciona transição para suavizar o efeito */
 }
 
-/* Alteração para aumentar e diminuir o tamanho do texto ao passar o mouse */
-.lista-pdv ul li {
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-size: 15px;
-  font-style: normal;
-  margin-top: 5px;
-  transition: font-size 0.3s ease;
+.carrossel-img.active {
+  display: block;
+  transform: translateX(0); /* Garante que a imagem ativa esteja visível */
 }
 
-.lista-pdv ul li:hover {
-  font-size: 18px; /* Novo tamanho do texto ao passar o mouse */
-}
-.lista-pdv li {
-  margin-left: 20px;
-}
-
-/* =====================Texto PDV===================== */
-#texto-pdv {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  margin-right: 100px;
+.carrossel-controls {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
 }
 
-/* =====================Tela Mesa===================== */
-.text1 button {
-  background-color: #F39716;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 12px;
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
   cursor: pointer;
-  border-radius: 20px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, .60);
-  max-width: 200px;
-  width: auto;
-  outline: none;
-  margin-top: 20px;
 }
 
-.tela3 {
-  width: 80%;
+.indicator.active {
+  background-color: #F39716;
 }
 
-/* =====================Lista Delivery===================== */
-.lista-delivery ul {
-  list-style-type: none;
-  padding: 0;
-  padding-top: 10px;
+.slide-right {
+  animation: slideRight 1s forwards;
 }
 
-.lista-delivery li img {
-  vertical-align: top;
-  width: 20px;
+.carrossel-img.active.slide-right {
+  display: block;
+  animation: slideRight 1s forwards;
 }
 
-/* Alteração para aumentar e diminuir o tamanho do texto ao passar o mouse */
-.lista-delivery ul li {
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-size: 15px;
-  font-style: normal;
-  margin-top: 5px;
-  transition: font-size 0.3s ease;
+@keyframes slideRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
-.lista-delivery ul li:hover {
-  font-size: 18px; /* Novo tamanho do texto ao passar o mouse */
+.imagem-dispositivos img{
+  position: absolute;
+  top: 100px; /* Ajuste conforme necessário */
+  left: 1400px;
+  transform: translateX(-50%);
+  width: 100px;
+}
+.engrenagem img{
+  padding-top: 160px;
 }
 
-/* =====================Slide Delivery===================== */
+/* =====================Slide Delivery===================== 
 section.slider {
   margin: auto;
   width: 70%;
@@ -350,7 +306,7 @@ section.slider {
 #radio3:checked ~ .primeiro {
   margin-left: -50%;
 }
-
+*/
 /* ==========Animação aparecer========== */
 @keyframes fadeInAnimation {
   0% {
@@ -361,85 +317,3 @@ section.slider {
    }
 }
 
-/* =====================Media Queries===================== */
-@media screen and (max-width: 1024px) {
-  .custom-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .text1 {
-    padding: 0 20px 50px;
-    text-align: left; /* Alinha o texto principal à esquerda */
-  }
-
-  .text1 h1 {
-    text-align: left; /* Alinha o título à esquerda */
-  }
-
-  .engrenagem {
-    margin-bottom: 20px;
-  }
-
-  .acesso img,
-  .tela3 {
-    margin-left: 0;
-    max-width: 100%;
-  }
-
-  .acesso p {
-    margin-left: 0;
-    text-align: left; /* Alinha o parágrafo à esquerda */
-  }
-
-  .container {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-    width: 90%;
-    padding: 0;
-    margin-left: 0;
-    position: relative;
-  }
-
-  .lista {
-    margin-bottom: 20px;
-    margin-right: 0;
-    text-align: left; /* Alinha o texto da lista à esquerda */
-  }
-
-  .engrenagem,
-  .engrenagem-mesa,
-  .engrenagem-comanda {
-    margin: 20px auto;
-  }
-
-  .custom-buttons-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .custom-button {
-    margin: 10px 0;
-  }
-
-  .saiba-mais button {
-    margin-left: 0;
-  }
-
-  .lista h2 {
-    text-align: left; /* Alinha o título da lista à esquerda */
-  }
-
-  .lista ul li {
-    text-align: left; /* Alinha os itens da lista à esquerda */
-  }
-
-  .lista-pdv ul li {
-    text-align: left; /* Alinha os itens da lista PDV à esquerda */
-  }
-
-  .lista-delivery ul li {
-    text-align: left; /* Alinha os itens da lista delivery à esquerda */
-  }
-}
