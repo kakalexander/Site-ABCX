@@ -44,7 +44,10 @@ document.addEventListener('DOMContentLoaded', function() {
     { images: document.querySelectorAll('.carrossel-img'), indicators: document.querySelectorAll('.indicator') },
     { images: document.querySelectorAll('.carrossel-img2'), indicators: document.querySelectorAll('.indicator2') },
     { images: document.querySelectorAll('.carrossel-img3'), indicators: document.querySelectorAll('.indicator3') },
-    { images: document.querySelectorAll('.carrossel-img4'), indicators: document.querySelectorAll('.indicator4') }
+    { images: document.querySelectorAll('.carrossel-img4'), indicators: document.querySelectorAll('.indicator4') },
+    { images: document.querySelectorAll('.carrossel-img5'), indicators: document.querySelectorAll('.indicator5') },
+    { images: document.querySelectorAll('.carrossel-img6'), indicators: document.querySelectorAll('.indicator6') },
+    { images: document.querySelectorAll('.carrossel-img7'), indicators: document.querySelectorAll('.indicator7') }
   ];
 
   // Função para mostrar a imagem no carrossel específico

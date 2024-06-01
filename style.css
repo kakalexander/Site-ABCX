@@ -170,14 +170,14 @@ body{
   padding-top: 100px;
 }
 
-.carrossel-img, .carrossel-img2, .carrossel-img3, .carrossel-img4 {
+.carrossel-img, .carrossel-img2, .carrossel-img3, .carrossel-img4, .carrossel-img5, .carrossel-img6, .carrossel-img7 {
   width: 100%;
   display: none;
   transition: transform 1s ease; /* Adiciona transição para suavizar o efeito */
 }
 
 
-.carrossel-img.active, .carrossel-img2.active, .carrossel-img3.active, .carrossel-img4.active{
+.carrossel-img.active, .carrossel-img2.active, .carrossel-img3.active, .carrossel-img4.active, .carrossel-img5.active, .carrossel-img6.active, .carrossel-img7.active{
   display: block;
   transform: translateX(0); /* Garante que a imagem ativa esteja visível */
 }
@@ -191,7 +191,7 @@ body{
   gap: 5px;
 }
 
-.indicator, .indicator2, .indicator3, .indicator4 {
+.indicator, .indicator2, .indicator3, .indicator4, .indicator5, .indicator6, .indicator7 {
   width: 10px;
   height: 10px;
   background-color: rgba(255, 255, 255, 0.5);
@@ -199,7 +199,7 @@ body{
   cursor: pointer;
 }
 
-.indicator.active, .indicator2.active, .indicator3.active, .indicator4.active {
+.indicator.active, .indicator2.active, .indicator3.active, .indicator4.active, .indicator5.active, .indicator6.active, .indicator7.active {
   background-color: #F39716;
 }
 
