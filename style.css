@@ -1,13 +1,14 @@
-
-
 .custom-container {
   background-color: rgb(255, 255, 255);
   color: #153749;
   font-family: Roboto;
   margin: 0 auto;
   padding: 15px;
-  width: 1500px;
+  max-width: 1500px;
+  overflow-x: hidden; /* Bloqueia a rolagem horizontal */
+  overflow-y: auto;   /* Permite a rolagem vertical */
 }
+
 /* =========================Estilo Global===================== */
 .custom-content {
   margin: 0;
@@ -16,7 +17,19 @@
   justify-content: flex-start;
 }
 
+/* ========================Animação====================== */
+@keyframes slideRightFromGear {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 
+.slide-right {
+  animation: slideRightFromGear 1s forwards;
+}
 
 /* ========================Estilo dos Botões====================== */
 .custom-buttons-container {
@@ -48,7 +61,6 @@
   background-color: #F49920;
 }
 
-
 /* =======================Estilo do Texto Principal====================== */
 .text1 {
   width: 50%;
@@ -57,7 +69,6 @@
   font-weight: 500;
   font-style: normal;
   padding: 0 40px 230px;
-  
 }
 
 .text1 h1 {
@@ -66,7 +77,7 @@
   font-weight: 900;
   font-style: normal;
   color: #0a212c;
-  text-align: left; /* Alinha o título à esquerda*/ 
+  text-align: left; /* Alinha o título à esquerda */
 }
 
 .negritos {
@@ -75,6 +86,7 @@
   font-weight: 900;
   font-style: normal;
 }
+
 .destaque {
   color: #F49920;
   font-family: "Roboto", sans-serif;
@@ -90,15 +102,14 @@
   max-width: 500px;
 }
 
-
 /* ===================== Botao Saiba Mais===================== */
-
-.botao-saiba-mais{
+.botao-saiba-mais {
   display: flex;
   justify-content: flex-start;
   align-items: end;
   padding-top: 20px;
 }
+
 .saiba-mais {
   background-color: #153749;
   border: none;
@@ -117,7 +128,6 @@
 }
 
 /* =====================Container Listas===================== */
-
 .lista-contain {
   display: flex;
   flex-direction: row;
@@ -162,7 +172,6 @@
 }
 
 /*=============== Imagem tamanhos ========================= */
-
 .imagem-carrossel {
   position: relative;
   width: 100%;
@@ -171,14 +180,20 @@
   padding-top: 100px;
 }
 
-.carrossel-img, .carrossel-img2, .carrossel-img3, .carrossel-img4, .carrossel-img5, .carrossel-img6, .carrossel-img7 {
+.carrossel-img, .carrossel-img2, .carrossel-img3, .carrossel-img4, .carrossel-img5, .carrossel-img6 {
   width: 100%;
   display: none;
   transition: transform 1s ease; /* Adiciona transição para suavizar o efeito */
 }
 
+.carrossel-img7{
+  width: 100%;
+  display: none;
+  transition: transform 1s ease; /* Adiciona transição para suavizar o efeito */
+  padding-top: 30px;
+}
 
-.carrossel-img.active, .carrossel-img2.active, .carrossel-img3.active, .carrossel-img4.active, .carrossel-img5.active, .carrossel-img6.active, .carrossel-img7.active{
+.carrossel-img.active, .carrossel-img2.active, .carrossel-img3.active, .carrossel-img4.active, .carrossel-img5.active, .carrossel-img6.active, .carrossel-img7.active {
   display: block;
   transform: translateX(0); /* Garante que a imagem ativa esteja visível */
 }
@@ -195,23 +210,13 @@
 .indicator, .indicator2, .indicator3, .indicator4, .indicator5, .indicator6, .indicator7 {
   width: 10px;
   height: 10px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #163849;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .indicator.active, .indicator2.active, .indicator3.active, .indicator4.active, .indicator5.active, .indicator6.active, .indicator7.active {
   background-color: #F39716;
-}
-
-
-.slide-right {
-  animation: slideRight 1s forwards;
-}
-
-.carrossel-img.active.slide-right {
-  display: block;
-  animation: slideRight 1s forwards;
 }
 
 @keyframes slideRight {
@@ -223,113 +228,81 @@
   }
 }
 
-.imagem-dispositivos img{
+.imagem-dispositivos img {
   position: absolute;
-  top: 100px; /* Ajuste conforme necessário */
-  left: 1400px;
+  top: 50px; /* Ajuste conforme necessário */
+  right: 150px;
   transform: translateX(-50%);
   width: 100px;
 }
 
-.engrenagem img{
-  padding-top: 160px;
-}
-.engrenagem-pdv img{
-  padding-top: 80px;
-}
-
-/* =====================Slide Delivery===================== 
-section.slider {
-  margin: auto;
-  width: 70%;
-  height: auto;
-  padding: 0 !important;
-  overflow: hidden;
-}
-
-.slider-content {
-  width: 400%;
-  height: auto;
-  display: flex;
-}
-
-.slider-content input,
-.img-mobile {
-  display: none;
-}
-
-.slide-box {
-  width: 25%;
-  height: auto;
-  position: relative;
-  text-align: center;
-  transition: 1s;
-}
-
-.slide-box img {
-  width: 100%;
-}
-
-.nav-manual,
-.nav-auto {
+.imagem-dispositivos-mobile img {
   position: absolute;
-  width: 100%;
-  margin-top: 24%;
-  display: flex;
-  margin-left: 17%;
+  right: 170px;
+  transform: translateX(-50%);
+  width: 100px;
+  margin-top: 30px;
 }
 
-.nav-manual .manual-btn,
-.nav-auto div {
-  border: 2px solid #F39716;
-  padding: 6px;
-  border-radius: 50%;
-  cursor: pointer;
+.engrenagem img {
+  padding-top: 160px;
+  width: 35px;
 }
 
-.nav-manual .manual-btn:not(:last-child),
-.nav-auto div:not(:last-child) {
-  margin-right: 10px;
+.engrenagem-pdv img {
+  padding-top: 80px;
+  width: 35px;
 }
 
-.nav-manual .manual-btn:hover {
-  background-color: #F39716;
-}
-
-#radio1:checked ~ .nav-auto .auto-btn1,
-#radio2:checked ~ .nav-auto .auto-btn2,
-#radio3:checked ~ .nav-auto .auto-btn3 {
-  background-color: #F39716;
-}
-
-#vendas1:checked ~ .nav-auto .auto-btn1,
-#vendas2:checked ~ .nav-auto .auto-btn2{
-  background-color: #F39716;
-}
-
-#vendas2:checked ~ .primeiro {
-  margin-left: -25%;
-}
-
-#vendas3:checked ~ .primeiro {
-  margin-left: -50%;  
-}
-
-#radio2:checked ~ .primeiro {
-  margin-left: -25%;
-}
-
-#radio3:checked ~ .primeiro {
-  margin-left: -50%;
-}
-*/
-/* ==========Animação aparecer========== */
-@keyframes fadeInAnimation {
-  0% {
-      opacity: 0.3;
+/* =================== Responsividade =================== */
+@media (max-width: 768px) {
+  .custom-container {
+    width: auto;
+    padding: 10px;
   }
-  100% {
-      opacity: 1;
-   }
-}
 
+  .text1 {
+    width: 100%;
+    padding: 0;
+  }
+
+  .text1 h1 {
+    font-size: 24px;
+  }
+
+  #text-principal {
+    font-size: 16px;
+    max-width: none;
+  }
+
+  .botao-saiba-mais {
+    justify-content: center;
+    padding-top: 10px;
+  }
+
+  .lista-contain {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    width: 100%;
+  }
+
+  .lista {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .imagem-carrossel {
+    max-width: 100%;
+    padding-top: 20px;
+  }
+
+  .carrossel-controls {
+    bottom: 5px;
+  }
+
+  .custom-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -54,9 +54,9 @@ document.addEventListener('DOMContentLoaded', function() {
   function showImage(index, carousel) {
     carousel.images.forEach((img, i) => {
       if (i === index) {
-        img.classList.add('active', 'slide-right');
+        img.classList.add('active', 'slide-right','slide-right2' );
       } else {
-        img.classList.remove('active', 'slide-right');
+        img.classList.remove('active', 'slide-right', 'slide-right2');
       }
       carousel.indicators[i].classList.toggle('active', i === index);
     });
@@ -100,3 +100,10 @@ document.addEventListener('DOMContentLoaded', function() {
     interval = startCarousel(carousel);
   });
 });
+document.addEventListener('DOMContentLoaded', () => {
+  const elements = document.querySelectorAll('.custom-content');
+  elements.forEach(element => {
+    element.classList.add('slide-right', 'slide-right2');
+  });
+});
+
