@@ -254,6 +254,11 @@
   width: 35px;
 }
 
+.engrenagem-mobile img {
+  padding-top: 70px;
+  width: 35px;
+}
+
 /* =================== Responsividade =================== */
 @media (max-width: 768px) {
   .custom-container {
