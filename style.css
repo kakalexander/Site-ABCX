@@ -1,5 +1,5 @@
 .custom-container {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 23, 23);
   color: #153749;
   font-family: Roboto;
   margin: 0 auto;
@@ -7,6 +7,7 @@
   max-width: 1500px;
   overflow-x: hidden; /* Bloqueia a rolagem horizontal */
   overflow-y: auto;   /* Permite a rolagem vertical */
+  max-height: 700px;
 }
 
 /* =========================Estilo Global===================== */
@@ -15,6 +16,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  
 }
 
 /* ========================Animação====================== */
@@ -93,7 +95,12 @@
   font-weight: 900;
   font-style: normal;
 }
-
+.diminuir {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 17px;
+}
 #text-principal {
   font-size: 17px;
   font-family: "Roboto", sans-serif;
@@ -105,9 +112,12 @@
 /* ===================== Botao Saiba Mais===================== */
 .botao-saiba-mais {
   display: flex;
-  justify-content: flex-start;
-  align-items: end;
-  padding-top: 20px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px; /* Reduzido de 20px para 10px */
+  padding-bottom: 20px; /* Adicionado para espaçamento no final */
+  width: 100%;
+  box-sizing: border-box; /* Garante que o padding seja incluído na largura total */
 }
 
 .saiba-mais {
@@ -132,7 +142,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around; /* Alinha as listas de forma uniforme no contêiner */
-  padding-top: 100px;
+  padding-top: 150px;
   width: 1300px;
 }
 
@@ -180,6 +190,7 @@
   padding-top: 100px;
 }
 
+
 .carrossel-img, .carrossel-img2, .carrossel-img3, .carrossel-img4, .carrossel-img5, .carrossel-img6 {
   width: 100%;
   display: none;
@@ -187,7 +198,7 @@
 }
 
 .carrossel-img7{
-  width: 100%;
+  width: 80%;
   display: none;
   transition: transform 1s ease; /* Adiciona transição para suavizar o efeito */
   padding-top: 30px;
@@ -196,6 +207,14 @@
 .carrossel-img.active, .carrossel-img2.active, .carrossel-img3.active, .carrossel-img4.active, .carrossel-img5.active, .carrossel-img6.active, .carrossel-img7.active {
   display: block;
   transform: translateX(0); /* Garante que a imagem ativa esteja visível */
+}
+.carrossel-controls2 {
+  position: absolute;
+  bottom: 10px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
 }
 
 .carrossel-controls {
@@ -231,7 +250,7 @@
 .imagem-dispositivos img {
   position: absolute;
   top: 50px; /* Ajuste conforme necessário */
-  right: 150px;
+  right: 220px;
   transform: translateX(-50%);
   width: 100px;
 }
@@ -244,20 +263,17 @@
   margin-top: 30px;
 }
 
-.engrenagem img {
-  padding-top: 160px;
-  width: 35px;
+.engrenagem-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Isso faz com que o contêiner ocupe a altura total da tela */
+}
+.engrenagem-container img {
+  width: 40px;
+  padding-bottom: 200px;
 }
 
-.engrenagem-pdv img {
-  padding-top: 80px;
-  width: 35px;
-}
-
-.engrenagem-mobile img {
-  padding-top: 70px;
-  width: 35px;
-}
 
 /* =================== Responsividade =================== */
 @media (max-width: 768px) {
@@ -309,5 +325,10 @@
   .custom-content {
     flex-direction: column;
     align-items: center;
+  }
+
+  .engrenagem-container {
+    height: auto; /* Ajusta a altura automaticamente para conteúdo */
+    padding: 20px 0; /* Adiciona algum preenchimento para espaçamento */
   }
 }
