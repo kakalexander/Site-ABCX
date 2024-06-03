@@ -1,13 +1,13 @@
-body{
-    background-color: rgb(255, 255, 255);
-    color: #153749;
-    font-family: poppinsregular;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 15px;
+
+
+.custom-container {
+  background-color: rgb(255, 255, 255);
+  color: #153749;
+  font-family: Roboto;
+  margin: 0 auto;
+  padding: 15px;
+  width: 1500px;
 }
-
-
 /* =========================Estilo Global===================== */
 .custom-content {
   height: 100%;
