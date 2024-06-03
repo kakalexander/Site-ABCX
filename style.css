@@ -1,5 +1,5 @@
 .custom-container {
-  background-color: rgb(255, 23, 23);
+  background-color: rgb(255, 255, 255);
   color: #153749;
   font-family: Roboto;
   margin: 0 auto;
@@ -7,7 +7,6 @@
   max-width: 1500px;
   overflow-x: hidden; /* Bloqueia a rolagem horizontal */
   overflow-y: auto;   /* Permite a rolagem vertical */
-  max-height: 700px;
 }
 
 /* =========================Estilo Global===================== */
